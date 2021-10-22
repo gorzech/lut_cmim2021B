@@ -37,7 +37,6 @@ assert(max(abs(time - expected_time)) < tol, "Forward Euler time vector is incor
 %% Third ode_FE test - linear solution
 % test parameters
 % solution is linear in time: a * t + b
-clear
 a = 178.32;
 b = 1263461.4167;
 k = 46.5215;
