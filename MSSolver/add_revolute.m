@@ -15,4 +15,5 @@ b1 = get_body_id(mbs, body1_name);
 b2 = get_body_id(mbs, body2_name);
 rev = struct("name", name, "body1", b1, "s1", s1(:), "body2", b2, "s2", s2(:));
 mbs.joints.revolute = [mbs.joints.revolute, rev];
+mbs.nc = mbs.nc + 2;
 end

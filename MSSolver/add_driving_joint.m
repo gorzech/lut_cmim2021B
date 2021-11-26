@@ -9,5 +9,5 @@ c_id = get_coordinate_id(coordinate);
 
 driving = struct('name', name, 'body', b_id, 'coord', c_id, 'cfun', coordfun);
 mbs.joints.driving = [mbs.joints.driving, driving];
-end
+mbs.nc = mbs.nc + 1;
 

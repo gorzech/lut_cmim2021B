@@ -14,4 +14,5 @@ addOptional(p, 'fi', 0, @isscalar);
 parse(p, name, varargin{:});
 body = struct('name', p.Results.name, 'x0', p.Results.x, 'y0', p.Results.y, 'fi0', p.Results.fi);
 mbs.bodies = [mbs.bodies, body];
+mbs.nq = mbs.nq + 3;
 end

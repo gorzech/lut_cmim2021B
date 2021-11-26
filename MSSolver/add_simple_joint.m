@@ -8,5 +8,5 @@ c_id = get_coordinate_id(coordinate);
 
 simple = struct('name', name, 'body', b_id, 'coord', c_id, 'c0', initial_value);
 mbs.joints.simple = [mbs.joints.simple, simple];
-end
+mbs.nc = mbs.nc + 1;
 
