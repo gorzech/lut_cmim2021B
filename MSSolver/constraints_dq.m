@@ -1,4 +1,4 @@
-function Cq = constraints_dq(mbs, q, t)
+function Cq = constraints_dq(mbs, q)
 
 Cq = zeros(mbs.nc, mbs.nq);
 
