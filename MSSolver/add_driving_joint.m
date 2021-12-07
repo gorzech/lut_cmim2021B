@@ -11,9 +11,11 @@ syms t real
 fv = coordfun(t);
 dfv = diff(fv, t);
 h_dfv = matlabFunction(dfv, 'Vars', 't');
+ddfv = diff(dfv, t);
+h_ddfv = matlabFunction(ddfv, 'Vars', 't');
 
 driving = struct('name', name, 'body', b_id, 'coord', c_id, ...
-    'cfun', coordfun, 'cfun_dt', h_dfv);
+    'cfun', coordfun, 'cfun_dt', h_dfv, 'cfun_dtt', h_ddfv);
 mbs.joints.driving = [mbs.joints.driving, driving];
 mbs.nc = mbs.nc + 1;
 
